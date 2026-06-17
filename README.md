@@ -43,3 +43,12 @@ Projektet följer "Feature Branching"-metodik:
 1. Skapa en gren (branch) för din specifika ändring (`git checkout -b feature/namn`).
 2. Genomför ändringar och commit:a (`git commit -m "beskrivning"`).
 3. Pusha grenen till GitHub och skapa en Pull Request (PR) för granskning.
+
+## Bidra till projektet
+Vill du hjälpa till att bygga Biugu Core? Vad kul! 
+
+* Se aktuella uppgifter och önskade funktioner på vår [Issues-sida](https://github.com/DiamondStrand/biugu-core-wp/issues).
+* Vi använder [Projects](https://github.com/DiamondStrand/biugu-core-wp/projects) för att planera kommande releaser.
+* Är du nybörjare? Filtrera gärna efter etiketten `good first issue`.
+
+Vänligen skapa en Pull Request för dina ändringar så granskar vi dem så snart vi kan!
