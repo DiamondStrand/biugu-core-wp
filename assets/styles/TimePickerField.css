@@ -1,0 +1,128 @@
+.biugu-tp-wrap {
+    position: relative;
+    display: inline-block;
+    min-width: 140px;
+}
+
+.biugu-tp-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1d2327;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.biugu-tp-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 12px;
+    background: #fff;
+    border: 1px solid #8c8f94;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1d2327;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.biugu-tp-field-value {
+    flex: 1;
+    text-align: left;
+}
+
+.biugu-tp-popover {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    min-width: 220px;
+    overflow: hidden;
+}
+
+.biugu-tp-hours-scroll {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid #f0f0f1;
+    scrollbar-width: none;
+}
+
+.biugu-tp-hour-btn {
+    flex-shrink: 0;
+    padding: 9px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #646970;
+    transition: background 0.1s;
+    min-width: 36px;
+    text-align: center;
+}
+
+.biugu-tp-hour-btn:hover,
+.biugu-tp-hour-btn.is-active {
+    background: #f0f6fc;
+    color: #2271b1;
+}
+
+.biugu-tp-minutes-wrap {
+    padding: 10px 12px;
+}
+
+.biugu-tp-minutes-label {
+    font-size: 12px;
+    color: #646970;
+    margin-bottom: 8px;
+}
+
+.biugu-tp-minute-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.biugu-tp-min-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #1d2327;
+    min-width: 52px;
+    text-align: center;
+}
+
+.biugu-tp-min-btn:hover,
+.biugu-tp-min-btn.is-active {
+    background: #f0f6fc;
+    border: 1px solid #2271b1;
+    color: #2271b1;
+}
+
+.biugu-tp-footer {
+    padding: 8px 12px;
+    border-top: 1px solid #f0f0f1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.biugu-tp-confirm-btn {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid #2271b1;
+    background: #f0f6fc;
+    color: #2271b1;
+    cursor: pointer;
+    font-weight: 500;
+}

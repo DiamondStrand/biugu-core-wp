@@ -1,0 +1,951 @@
+{
+    "@meta": {
+        "version": "3.3.9",
+        "build": 1781371242
+    },
+    "settings": {
+        "types_only": "0",
+        "watch_changed_fields": "0",
+        "metadata_integration": "0",
+        "metadata_override_get": "0",
+        "register_meta_integration": "0",
+        "media_modal_fields": "0",
+        "autocomplete_limit": "15",
+        "session_auto_start": "0",
+        "dynamic_features_allow": "1",
+        "dynamic_features_enabled": [
+            "display",
+            "form"
+        ],
+        "show_access_restricted_messages": "0",
+        "show_access_admin_notices": "1",
+        "dynamic_features_allow_sql_clauses": "0",
+        "display_callbacks": "customized",
+        "display_callbacks_allowed": "esc_attr,esc_html",
+        "wisdom_opt_out": "1",
+        "active_components": [
+            "migrate-packages",
+            "templates"
+        ]
+    },
+    "pods": [
+        {
+            "name": "age_group",
+            "id": 81020,
+            "label": "\u00c5ldersgrupper",
+            "description": "",
+            "type": "taxonomy",
+            "storage": "table",
+            "hierarchical": "0",
+            "_migrated_28": "0",
+            "built_in_post_types_event": "1",
+            "built_in_post_types_article": "0",
+            "built_in_post_types_review": "0",
+            "built_in_post_types_event_occurrence": "0",
+            "built_in_post_types_place": "0",
+            "built_in_post_types_organizer": "0",
+            "built_in_post_types_year_round": "0",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81071,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        },
+        {
+            "name": "year_round",
+            "id": 81028,
+            "label": "\u00c5ret runt-aktiviteter",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "1",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_area": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "_migrated_28": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "4",
+            "menu_icon": "dashicons-clock",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81148,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "area_id",
+                            "id": 81056,
+                            "label": "Omr\u00e5de",
+                            "description": "",
+                            "weight": 0,
+                            "type": "pick",
+                            "pick_object": "taxonomy",
+                            "pick_val": "area"
+                        },
+                        {
+                            "name": "category_id",
+                            "id": 81057,
+                            "label": "Kategori",
+                            "description": "",
+                            "weight": 1,
+                            "type": "pick",
+                            "pick_object": "taxonomy",
+                            "pick_val": "event_category"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "organizer",
+            "id": 81024,
+            "label": "Arrang\u00f6rer",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "_migrated_28": "0",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_area": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "4",
+            "menu_icon": "dashicons-businessman",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81066,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "website",
+                            "id": 81031,
+                            "label": "Webbadress",
+                            "description": "",
+                            "weight": 0,
+                            "type": "website"
+                        },
+                        {
+                            "name": "phone",
+                            "id": 81032,
+                            "label": "Telefon",
+                            "description": "",
+                            "weight": 1,
+                            "type": "text"
+                        },
+                        {
+                            "name": "email",
+                            "id": 81033,
+                            "label": "E-post",
+                            "description": "",
+                            "weight": 2,
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "article",
+            "id": 81029,
+            "label": "Artiklar",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "1",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_area": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "_migrated_28": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "4",
+            "menu_icon": "dashicons-welcome-write-blog",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81072,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "image_url",
+                            "id": 81058,
+                            "label": "Bild-URL",
+                            "description": "",
+                            "weight": 0,
+                            "type": "website"
+                        },
+                        {
+                            "name": "is_featured",
+                            "id": 81059,
+                            "label": "Utvald artikel",
+                            "description": "",
+                            "weight": 1,
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "event_id",
+                            "id": 81060,
+                            "label": "Kopplade event",
+                            "description": "",
+                            "weight": 2,
+                            "type": "pick",
+                            "pick_object": "pod",
+                            "pick_val": "event"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "event",
+            "id": 81026,
+            "label": "Event & Paket",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "1",
+            "_migrated_28": "1",
+            "built_in_taxonomies_event_category": "1",
+            "built_in_taxonomies_event_tag": "1",
+            "built_in_taxonomies_age_group": "1",
+            "label_singular": "Event & Paket",
+            "supports_thumbnail": "1",
+            "supports_excerpt": "0",
+            "supports_trackbacks": "1",
+            "supports_revisions": "1",
+            "supports_quick_edit": "1",
+            "capability_type": "post",
+            "rewrite": "1",
+            "rewrite_custom_slug": "event",
+            "dynamic_features_allow": "inherit",
+            "restrict_dynamic_features": "1",
+            "restricted_dynamic_features": [
+                "form"
+            ],
+            "restricted_dynamic_features_forms": [
+                "edit"
+            ],
+            "show_access_restricted_messages": "inherit",
+            "show_access_admin_notices": "inherit",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "1",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "built_in_taxonomies_area": "0",
+            "menu_icon": "dashicons-calendar-alt",
+            "groups": [
+                {
+                    "name": "paketinstallningar",
+                    "id": 81076,
+                    "label": "Paketinst\u00e4llningar",
+                    "description": "",
+                    "weight": 0,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "normal",
+                    "meta_box_priority": "default",
+                    "fields": [
+                        {
+                            "name": "is_package",
+                            "id": 81044,
+                            "label": "\u00c4r ett paket (Inneh\u00e5ller flera event)",
+                            "description": "",
+                            "weight": 0,
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "packaged_events",
+                            "id": 81051,
+                            "label": "Event som ing\u00e5r i detta paket",
+                            "description": "",
+                            "weight": 1,
+                            "type": "pick",
+                            "pick_object": "post_type",
+                            "pick_val": "event",
+                            "pick_format_type": "single",
+                            "pick_format_single": "dropdown",
+                            "pick_format_multi": "list",
+                            "pick_display_format_multi": "default",
+                            "pick_display_format_separator": ", ",
+                            "pick_allow_add_new": "0",
+                            "pick_taggable": "0",
+                            "pick_show_icon": "1",
+                            "pick_show_edit_link": "1",
+                            "pick_show_view_link": "1",
+                            "pick_limit": "0",
+                            "pick_user_role": "Administrator",
+                            "pick_sync_taxonomy": "0",
+                            "pick_sync_taxonomy_hide_taxonomy_ui": "0",
+                            "pick_post_status": "publish",
+                            "pick_post_author": "0",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "1",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0",
+                            "conditional_logic": {
+                                "action": "show",
+                                "logic": "any",
+                                "rules": [
+                                    {
+                                        "field": "is_package",
+                                        "compare": "=",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "allmant",
+                    "id": 81075,
+                    "label": "Allm\u00e4nt",
+                    "description": "",
+                    "weight": 1,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "normal",
+                    "meta_box_priority": "high",
+                    "logged_in": "0",
+                    "admin_only": "0",
+                    "restrict_role": "0",
+                    "restrict_capability": "0",
+                    "fields": [
+                        {
+                            "name": "price",
+                            "id": 81040,
+                            "label": "Pris i kr (0 = gratis)",
+                            "description": "",
+                            "weight": 0,
+                            "type": "number",
+                            "number_format_type": "number",
+                            "number_format": "i18n",
+                            "number_decimals": "0",
+                            "number_format_soft": "0",
+                            "number_decimal_handling": "none",
+                            "number_step": "1",
+                            "number_max_length": "12",
+                            "number_html5": "0",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0",
+                            "logged_in_only": "0",
+                            "admin_only": "0",
+                            "restrict_role": "0",
+                            "restrict_capability": "0",
+                            "hidden": "0",
+                            "read_only": "0",
+                            "read_only_restricted": "0",
+                            "default_value": "0"
+                        },
+                        {
+                            "name": "pris_okant",
+                            "id": 81245,
+                            "label": "Pris ok\u00e4nt",
+                            "description": "Om priset \u00e4r ok\u00e4nt och vi ska meddela att bes\u00f6karen b\u00f6r se eventes sida f\u00f6r mer information.",
+                            "weight": 1,
+                            "type": "boolean",
+                            "boolean_format_type": "checkbox",
+                            "boolean_yes_label": "Ja",
+                            "boolean_no_label": "Nej",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0"
+                        },
+                        {
+                            "name": "organizer_id",
+                            "id": 81037,
+                            "label": "Arrang\u00f6r",
+                            "description": "",
+                            "weight": 2,
+                            "type": "pick",
+                            "pick_object": "pod",
+                            "pick_val": "organizer"
+                        },
+                        {
+                            "name": "external_url",
+                            "id": 81041,
+                            "label": "L\u00e4nk till extern sida",
+                            "description": "",
+                            "weight": 3,
+                            "type": "website"
+                        }
+                    ]
+                },
+                {
+                    "name": "plats_och_tid",
+                    "id": 81082,
+                    "label": "Plats och tid",
+                    "description": "",
+                    "weight": 2,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "normal",
+                    "meta_box_priority": "default",
+                    "fields": [
+                        {
+                            "name": "occerencies",
+                            "id": 81133,
+                            "label": "Tilllf\u00e4llen",
+                            "description": "",
+                            "weight": 0,
+                            "type": "heading",
+                            "heading_tag": "h2",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "status",
+                    "id": 81064,
+                    "label": "Status",
+                    "description": "",
+                    "weight": 3,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "side",
+                    "meta_box_priority": "default",
+                    "logged_in": "0",
+                    "admin_only": "0",
+                    "restrict_role": "0",
+                    "restrict_capability": "0",
+                    "fields": [
+                        {
+                            "name": "is_featured",
+                            "id": 81045,
+                            "label": "Utvalt event",
+                            "description": "",
+                            "weight": 0,
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "custom_badge",
+                            "id": 81046,
+                            "label": "Etiketter",
+                            "description": "Fyll i ett ord som ska sticka ut p\u00e5 eventkortet, t.ex. 'Prisv\u00e4rt' eller 'Helgspecial'.",
+                            "weight": 1,
+                            "type": "text",
+                            "text_allowed_html_tags": "strong em a ul ol li b i",
+                            "text_max_length": "255",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "tips",
+                    "id": 81077,
+                    "label": "Tips",
+                    "description": "",
+                    "weight": 4,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "side",
+                    "meta_box_priority": "default",
+                    "logged_in": "0",
+                    "admin_only": "0",
+                    "restrict_role": "0",
+                    "restrict_capability": "0",
+                    "fields": [
+                        {
+                            "name": "submitted_via_tip",
+                            "id": 81047,
+                            "label": "Skickat via tips",
+                            "description": "",
+                            "weight": 0,
+                            "type": "boolean"
+                        },
+                        {
+                            "name": "tip_submitted_at",
+                            "id": 81049,
+                            "label": "Inskickat datum (Tips)",
+                            "description": "",
+                            "weight": 1,
+                            "type": "datetime",
+                            "datetime_type": "format",
+                            "datetime_format": "mdy",
+                            "datetime_time_type": "12",
+                            "datetime_time_format": "h_mma",
+                            "datetime_time_format_24": "hh_mm",
+                            "datetime_allow_empty": "1",
+                            "datetime_html5": "0",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "1",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0",
+                            "conditional_logic": {
+                                "action": "show",
+                                "logic": "any",
+                                "rules": [
+                                    {
+                                        "field": "submitted_via_tip",
+                                        "compare": "=",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "tip_contact_email",
+                            "id": 81048,
+                            "label": "Tipsarens e-post",
+                            "description": "",
+                            "weight": 2,
+                            "type": "text",
+                            "text_allowed_html_tags": "strong em a ul ol li b i",
+                            "text_max_length": "255",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "1",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0",
+                            "conditional_logic": {
+                                "action": "show",
+                                "logic": "any",
+                                "rules": [
+                                    {
+                                        "field": "submitted_via_tip",
+                                        "compare": "=",
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "antecknigar",
+                    "id": 81152,
+                    "label": "Antecknigar",
+                    "description": "",
+                    "weight": 5,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "normal",
+                    "meta_box_priority": "default",
+                    "logged_in": "0",
+                    "admin_only": "0",
+                    "restrict_role": "0",
+                    "restrict_capability": "0",
+                    "fields": [
+                        {
+                            "name": "notes",
+                            "id": 81129,
+                            "label": "Interna anm\u00e4rkningar",
+                            "description": "",
+                            "weight": 0,
+                            "type": "paragraph",
+                            "paragraph_allowed_html_tags": "strong em a ul ol li b i",
+                            "paragraph_max_length": "-1",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0",
+                            "paragraph_trim": "1",
+                            "paragraph_trim_lines": "0",
+                            "paragraph_trim_p_brs": "0",
+                            "paragraph_trim_extra_lines": "0",
+                            "paragraph_allow_html": "0",
+                            "paragraph_sanitize_html": "1",
+                            "paragraph_oembed": "0",
+                            "paragraph_wptexturize": "1",
+                            "paragraph_convert_chars": "1",
+                            "paragraph_wpautop": "1",
+                            "paragraph_allow_shortcode": "0"
+                        }
+                    ]
+                },
+                {
+                    "name": "taxonomies",
+                    "id": 81246,
+                    "label": "Taxonomies",
+                    "description": "",
+                    "weight": 6,
+                    "roles_allowed": "administrator",
+                    "meta_box_context": "side",
+                    "meta_box_priority": "default",
+                    "fields": [
+                        {
+                            "name": "taxonomies",
+                            "id": 81247,
+                            "label": "Taxonomies",
+                            "description": "",
+                            "weight": 0,
+                            "type": "heading",
+                            "heading_tag": "h2",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "event_occurrence",
+            "id": 81027,
+            "label": "Event-tillf\u00e4llen",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "_migrated_28": "0",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "0",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "name_admin_bar": "Tillf\u00e4llen",
+            "menu_name": "Tillf\u00e4llen",
+            "built_in_taxonomies_area": "0",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81067,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "event_id",
+                            "id": 81052,
+                            "label": "Koppling till event\/paket",
+                            "description": "",
+                            "weight": 0,
+                            "type": "pick",
+                            "pick_object": "pod",
+                            "pick_val": "event"
+                        },
+                        {
+                            "name": "start_datetime",
+                            "id": 81053,
+                            "label": "Starttid",
+                            "description": "",
+                            "weight": 1,
+                            "type": "datetime"
+                        },
+                        {
+                            "name": "end_datetime",
+                            "id": 81054,
+                            "label": "Sluttid",
+                            "description": "",
+                            "weight": 2,
+                            "type": "datetime"
+                        },
+                        {
+                            "name": "location",
+                            "id": 81055,
+                            "label": "Plats",
+                            "description": "",
+                            "weight": 3,
+                            "type": "pick",
+                            "pick_object": "post_type",
+                            "pick_val": "place",
+                            "pick_format_type": "single",
+                            "pick_format_single": "dropdown",
+                            "pick_format_multi": "list",
+                            "pick_display_format_multi": "default",
+                            "pick_display_format_separator": ", ",
+                            "pick_allow_add_new": "1",
+                            "pick_taggable": "0",
+                            "pick_show_icon": "1",
+                            "pick_show_edit_link": "1",
+                            "pick_show_view_link": "1",
+                            "pick_limit": "0",
+                            "pick_user_role": "Administrator",
+                            "pick_sync_taxonomy": "0",
+                            "pick_sync_taxonomy_hide_taxonomy_ui": "0",
+                            "pick_post_status": "publish",
+                            "pick_post_author": "0",
+                            "default_evaluate_tags": "0",
+                            "default_empty_fields": "0",
+                            "roles_allowed": "administrator",
+                            "enable_conditional_logic": "0",
+                            "conditional_logic_save_value": "0",
+                            "rest_pick_response": "array",
+                            "rest_pick_depth": "1",
+                            "required": "0",
+                            "unique": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "event_category",
+            "id": 81022,
+            "label": "Kategorier",
+            "description": "",
+            "type": "taxonomy",
+            "storage": "table",
+            "hierarchical": "1",
+            "_migrated_28": "0",
+            "built_in_post_types_event": "1",
+            "built_in_post_types_article": "0",
+            "built_in_post_types_review": "0",
+            "built_in_post_types_event_occurrence": "0",
+            "built_in_post_types_place": "0",
+            "built_in_post_types_organizer": "0",
+            "built_in_post_types_year_round": "0",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81068,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        },
+        {
+            "name": "area",
+            "id": 81021,
+            "label": "Omr\u00e5den",
+            "description": "",
+            "type": "taxonomy",
+            "storage": "table",
+            "hierarchical": "0",
+            "_migrated_28": "0",
+            "built_in_post_types_event": "0",
+            "built_in_post_types_article": "0",
+            "built_in_post_types_review": "0",
+            "built_in_post_types_event_occurrence": "0",
+            "built_in_post_types_place": "1",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_name": "Omr\u00e5den",
+            "menu_location": "objects",
+            "menu_position": "3",
+            "show_in_nav_menus": "1",
+            "show_tagcloud": "1",
+            "show_in_quick_edit": "1",
+            "show_admin_column": "0",
+            "show_admin_column_filter": "0",
+            "menu_icon": "dashicons-admin-site-alt",
+            "built_in_post_types_organizer": "0",
+            "built_in_post_types_year_round": "0",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81069,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        },
+        {
+            "name": "place",
+            "id": 81025,
+            "label": "Platser",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "_migrated_28": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "2",
+            "menu_icon": "dashicons-location",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "built_in_taxonomies_area": "1",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81126,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "street",
+                            "id": 81034,
+                            "label": "Gatunamn",
+                            "description": "",
+                            "weight": 0,
+                            "type": "text"
+                        },
+                        {
+                            "name": "zip_code",
+                            "id": 81035,
+                            "label": "Postkod",
+                            "description": "",
+                            "weight": 1,
+                            "type": "number"
+                        },
+                        {
+                            "name": "city",
+                            "id": 81036,
+                            "label": "Stad",
+                            "description": "",
+                            "weight": 2,
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "review",
+            "id": 81030,
+            "label": "Recensioner",
+            "description": "",
+            "type": "post_type",
+            "storage": "table",
+            "supports_title": "1",
+            "supports_editor": "0",
+            "built_in_taxonomies_event_category": "0",
+            "built_in_taxonomies_area": "0",
+            "built_in_taxonomies_event_tag": "0",
+            "built_in_taxonomies_age_group": "0",
+            "_migrated_28": "0",
+            "show_ui": "1",
+            "show_in_menu": "1",
+            "menu_position": "5",
+            "menu_icon": "dashicons-star-filled",
+            "show_in_nav_menus": "1",
+            "show_in_admin_bar": "1",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81073,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": [
+                        {
+                            "name": "event_id",
+                            "id": 81061,
+                            "label": "Kopplat event\/plats",
+                            "description": "",
+                            "weight": 0,
+                            "type": "pick",
+                            "pick_object": "pod",
+                            "pick_val": "event"
+                        },
+                        {
+                            "name": "rating_overall",
+                            "id": 81062,
+                            "label": "Betyg (1-5)",
+                            "description": "",
+                            "weight": 1,
+                            "type": "number"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "event_tag",
+            "id": 81023,
+            "label": "Taggar",
+            "description": "",
+            "type": "taxonomy",
+            "storage": "table",
+            "hierarchical": "0",
+            "_migrated_28": "0",
+            "built_in_post_types_event": "1",
+            "built_in_post_types_article": "0",
+            "built_in_post_types_review": "0",
+            "built_in_post_types_event_occurrence": "0",
+            "built_in_post_types_place": "0",
+            "built_in_post_types_organizer": "0",
+            "built_in_post_types_year_round": "0",
+            "groups": [
+                {
+                    "name": "fler_falt",
+                    "id": 81070,
+                    "label": "Fler f\u00e4lt",
+                    "description": "",
+                    "weight": 0,
+                    "fields": []
+                }
+            ]
+        }
+    ]
+}
