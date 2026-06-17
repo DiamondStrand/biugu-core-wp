@@ -41,7 +41,7 @@ class Admin_Menu
     /**
      * Köar upp React-scriptet (build-filen från wp-scripts)
      */
-    public function enqueue_admin_scripts($hook)
+    public function enqueue_admin_scripts(string $hook)
     {
         // Kontrollera att vi bara laddar scriptet på vår sida
         if ($hook !== 'toplevel_page_biugu-settings') {
