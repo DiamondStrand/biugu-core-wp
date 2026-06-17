@@ -48,7 +48,7 @@ Projektet följer "Feature Branching"-metodik:
 Vill du hjälpa till att bygga Biugu Core? Vad kul! 
 
 * Se aktuella uppgifter och önskade funktioner på vår [Issues-sida](https://github.com/DiamondStrand/biugu-core-wp/issues).
-* Vi använder [Projects](https://github.com/DiamondStrand/biugu-core-wp/projects) för att planera kommande releaser.
+* Vi använder [Projects](https://github.com/users/DiamondStrand/projects/4) för att planera kommande releaser.
 * Är du nybörjare? Filtrera gärna efter etiketten `good first issue`.
 
 Vänligen skapa en Pull Request för dina ändringar så granskar vi dem så snart vi kan!
