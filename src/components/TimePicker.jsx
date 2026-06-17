@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from '@wordpress/element';
-import './TimePickerField.css';
+import '../../assets/styles/components/timepicker.css';
 
 export default function TimePickerField({ label, value, onChange, interval = 15, startHour = 6, endHour = 23 }) {
     const [open, setOpen] = useState(false);

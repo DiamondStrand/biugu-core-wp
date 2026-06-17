@@ -1,6 +1,8 @@
 import { useState, useEffect } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 
+import '../../../assets/styles/occurrence.css'
+
 const StatCard = ({ label, value, status = 'default' }) => (
     <div className={`biugu-stat-card ${status}`}>
         <div className="biugu-stat-label">{label}</div>
@@ -9,7 +11,7 @@ const StatCard = ({ label, value, status = 'default' }) => (
 );
 
 const Badge = ({ status, label }) => (
-    <span className={`biugu-badge biugu-badge-${status}`}>
+    <span className={`biugu-badge is-${status}`}>
         {label}
     </span>
 );
@@ -26,7 +28,7 @@ const ActionRow = ({ name, description, children, last = false }) => (
 
 const Toast = ({ message, type }) => {
     if (!message) return null;
-    return <div className={`biugu-toast biugu-toast-${type}`}>{message}</div>;
+    return <div className={`biugu-toast is-${type}`}>{message}</div>;
 };
 
 const LogEntry = ({ entry }) => (
@@ -130,7 +132,7 @@ export default function AdminApp() {
             </div>
 
             <div className="biugu-card">
-                <div className="card-title">Schema & data</div>
+                <div className="biugu-card-title">Schema & data</div>
 
                 <ActionRow name="Synka Pods-schema" description="Uppdaterar struktur mot databasen">
                     <button className="biugu-btn-primary" onClick={handleSync} disabled={syncing}>

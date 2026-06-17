@@ -12,7 +12,7 @@ import {
 
 import TimePickerField from '../../components/TimePicker';
 
-import './occerrence.css';
+import '../../../assets/styles/occurrence.css'
 
 export default function Occurrence({ 
     initialOccurrences = [], 

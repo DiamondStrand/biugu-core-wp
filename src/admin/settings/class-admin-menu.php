@@ -48,13 +48,6 @@ class Admin_Menu
             return;
         }
 
-        wp_enqueue_style(
-            'biugu-admin-css',
-            get_stylesheet_directory_uri() . '/styles/admin.css',
-            [],
-            '1.0.0'
-        );
-
         // Här pekar vi på filen som wp-scripts genererar i build-mappen
         wp_enqueue_script(
             'biugu-admin-js',
