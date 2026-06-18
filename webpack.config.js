@@ -5,6 +5,6 @@ module.exports = {
     ...defaultConfig,
     entry: {
         // Vi pekar ut din specifika admin-startfil
-        'index': path.resolve( process.cwd(), 'src/index.jsx' )
+        'index': path.resolve( process.cwd(), 'src/index.js' )
     }
 };

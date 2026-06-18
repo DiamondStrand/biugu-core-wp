@@ -24,7 +24,7 @@ class Event_Meta_Box
 
             wp_enqueue_script(
                 'biugu-admin-js',
-                plugin_dir_url(dirname(__DIR__)) . '../build/index.js',
+                plugin_dir_url(dirname(__DIR__)) . '../../build/index.js',
                 ['wp-element', 'wp-api-fetch'],
                 '1.0.0',
                 true
