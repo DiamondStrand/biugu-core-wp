@@ -3,8 +3,8 @@ import Occurrence from './Occurrence';
 
 export default function EventEditorPage() {
     // Denna data skickas med från WP via wp_localize_script
-    const placesFromServer = window.biuCalendarSetup?.places || [];
-    const initialOccurrences = window.biuCalendarSetup?.occurrences || [];
+    const placesFromServer = window.biuguEventData?.places || [];
+    const initialOccurrences = window.biuguEventData?.occurrences || [];
 
     const [allOccurrences, setAllOccurrences] = useState(initialOccurrences);
     
