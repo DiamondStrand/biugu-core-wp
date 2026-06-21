@@ -1,6 +1,8 @@
 import { createRoot } from '@wordpress/element';
 import AdminApp from './admin/settings/page';
-import OccurrenceApp from './admin/event/Occurrence';
+import EventEditorPage from './admin/event/page';
+
+console.log('Biugu Core JS loaded');
 
 const checkElements = () => {
     const adminRoot = document.getElementById('biugu-admin-root');
@@ -14,18 +16,7 @@ const checkElements = () => {
     }
 
     if (eventRoot) {
-        createRoot(eventRoot).render(
-            <OccurrenceApp 
-                initialOccurrences={[]} 
-                places={places} // Använd variabeln vi hämtade ovan!
-                onOccurrencesChange={(data) => {
-                    const input = document.getElementById('biu-occurrences-transport-field');
-                    if (input) {
-                        input.value = JSON.stringify(data);
-                    }
-                }} 
-            />
-        );
+        createRoot(eventRoot).render(<EventEditorPage />);
     }
 };
 

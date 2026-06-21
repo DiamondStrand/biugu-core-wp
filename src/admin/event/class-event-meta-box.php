@@ -2,6 +2,10 @@
 
 namespace Biugu_Core\Admin;
 
+if (! defined('ABSPATH')) {
+    exit; // Avbryt om filen anropas direkt utanför WordPress
+}
+
 class Event_Meta_Box
 {
     public function __construct()
@@ -15,17 +19,19 @@ class Event_Meta_Box
 
     public function enqueue_event_scripts($hook)
     {
-        global $post;
+        // Hämta det aktuella skärmobjektet från WordPress
+        $screen = get_current_screen();
 
-        // Ladda endast på event-redigering
-        if (($hook === 'post.php' || $hook === 'post-new.php') &&
-            isset($post) && $post->post_type === 'event'
-        ) {
+        // Garanterar att skriptet laddas på BÅDE post.php (redigera) och post-new.php (skapa nytt)
+        if ($screen && $screen->post_type === 'event') {
+
+            // Genererar en helt ren absolut URL till din build-mapp baserad på pluginets rotfil
+            $js_url = plugins_url('build/index.js', dirname(dirname(dirname(__DIR__))) . '/biugu-core.php');
 
             wp_enqueue_script(
                 'biugu-admin-js',
-                plugin_dir_url(dirname(__DIR__)) . '../../build/index.js',
-                ['wp-element', 'wp-api-fetch'],
+                $js_url,
+                ['wp-element', 'wp-api-fetch', 'wp-components'],
                 '1.0.0',
                 true
             );

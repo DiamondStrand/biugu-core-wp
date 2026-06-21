@@ -2,6 +2,10 @@
 
 namespace Biugu_Core\Database;
 
+if (! defined('ABSPATH')) {
+    exit; // Avbryt om filen anropas direkt utanför WordPress
+}
+
 class Pods_Init
 {
     public function __construct()

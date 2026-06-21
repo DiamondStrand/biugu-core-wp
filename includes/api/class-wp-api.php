@@ -2,6 +2,10 @@
 
 namespace Biugu_Core\Api;
 
+if (! defined('ABSPATH')) {
+    exit; // Avbryt om filen anropas direkt utanför WordPress
+}
+
 class WP_Api
 {
 

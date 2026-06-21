@@ -2,6 +2,10 @@
 
 namespace Biugu_Core;
 
+if (! defined('ABSPATH')) {
+    exit; // Avbryt om filen anropas direkt utanför WordPress
+}
+
 require_once plugin_dir_path(__FILE__) . 'database/class-pods-init.php';
 require_once plugin_dir_path(__FILE__) . 'sync/class-delta-sync.php';
 require_once plugin_dir_path(__FILE__) . 'api/class-wp-api.php';

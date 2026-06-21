@@ -2,6 +2,10 @@
 
 namespace Biugu_Core\Admin;
 
+if (! defined('ABSPATH')) {
+    exit; // Avbryt om filen anropas direkt utanför WordPress
+}
+
 class Admin_Menu
 {
 

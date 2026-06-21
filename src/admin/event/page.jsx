@@ -7,6 +7,9 @@ export default function EventEditorPage() {
     const initialOccurrences = window.biuCalendarSetup?.occurrences || [];
 
     const [allOccurrences, setAllOccurrences] = useState(initialOccurrences);
+    
+    console.log('Initial Occurrences:', initialOccurrences);
+    console.log('Places from Server:', placesFromServer);
 
     return (
         <div className="biu-event-editor-container">
@@ -24,6 +27,7 @@ export default function EventEditorPage() {
             {/* Detta dolda fält läses direkt av class-delta-sync.php när Posten sparas */}
             <input 
                 type="hidden" 
+                id="biu-occurrences-transport-field"
                 name="biu_occurrences_transport" 
                 value={JSON.stringify(allOccurrences)} 
             />
