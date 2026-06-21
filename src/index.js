@@ -6,7 +6,7 @@ console.log('Biugu Core JS loaded');
 
 const checkElements = () => {
     const adminRoot = document.getElementById('biugu-admin-root');
-    const eventRoot = document.getElementById('biu-event-editor-root');
+    const eventRoot = document.getElementById('biugu-event-editor-root');
 
     // Hämta platser från det globala objektet vi skickade med PHP
     const places = window.biuguEventData?.places || [];

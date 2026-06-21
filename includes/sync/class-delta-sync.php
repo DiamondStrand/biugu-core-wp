@@ -31,17 +31,34 @@ class Delta_Sync
             return;
         }
 
-        // 4. BAIL EARLY: Om det inte finns någon data medskickad från React-appen, avbryt
-        if (!isset($_POST['biu_occurrences_transport'])) {
-            return;
+        // 4. SYNK: Hantera tillfällen (Befintlig logik)
+        if (isset($_POST['biugu_occurrences_transport'])) {
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+            $raw_json = wp_unslash($_POST['biugu_occurrences_transport']);
+            $this->sync_occurrences($post_id, $post->post_title, $raw_json);
         }
 
-        // Datans giltighet saneras och valideras inuti sync_occurrences metoden under array-loopen
-        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        $raw_json = wp_unslash($_POST['biu_occurrences_transport']);
+        // 5. UTÖKNING: Hantera sparning av taxonomier från din nya React-komponent
+        if (isset($_POST['biugu_taxonomies_transport'])) {
+            // Inkommande JSON är en sammansatt sträng och saneras strukturerat i array-mappningen nedan
+            // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+            $raw_tax_json = wp_unslash($_POST['biugu_taxonomies_transport']);
+            $tax_data     = json_decode($raw_tax_json, true);
 
-        // Trigga synkningen med den faktiska datan från formuläret
-        $this->sync_occurrences($post_id, $post->post_title, $raw_json);
+            if (is_array($tax_data)) {
+                // 1. Spara åldersgrupper (Skickas som en array av heltal/IDs)
+                $age_groups = isset($tax_data['age_groups']) ? array_map('intval', $tax_data['age_groups']) : [];
+                wp_set_object_terms($post_id, $age_groups, 'age_group');
+
+                // 2. Spara kategorier (Skickas som sträng-tokens, saneras per fält)
+                $categories = isset($tax_data['categories']) ? array_map('sanitize_text_field', $tax_data['categories']) : [];
+                wp_set_object_terms($post_id, $categories, 'event_category');
+
+                // 3. Spara taggar (Skickas som sträng-tokens, saneras per fält)
+                $tags = isset($tax_data['tags']) ? array_map('sanitize_text_field', $tax_data['tags']) : [];
+                wp_set_object_terms($post_id, $tags, 'event_tag');
+            }
+        }
     }
 
     /**
