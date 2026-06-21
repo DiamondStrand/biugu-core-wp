@@ -1,7 +1,7 @@
 import { useState, useEffect } from '@wordpress/element';
 import apiFetch from '@wordpress/api-fetch';
 
-import '../../../assets/styles/occurrence.css'
+import '../../../assets/styles/admin-settings.css'
 
 const StatCard = ({ label, value, status = 'default' }) => (
     <div className={`biugu-stat-card ${status}`}>

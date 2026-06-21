@@ -36,6 +36,14 @@ class Event_Meta_Box
                 true
             );
 
+            $css_url = plugins_url('build/index.css', dirname(dirname(dirname(__DIR__))) . '/biugu-core.php');
+            wp_enqueue_style(
+                'biugu-admin-css',
+                $css_url,
+                [],
+                '1.0.0'
+            );
+
             // 1. Skapa arrayen
             $places = [];
             if (function_exists('pods')) {

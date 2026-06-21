@@ -45,20 +45,44 @@ class Admin_Menu
     /**
      * Köar upp React-scriptet (build-filen från wp-scripts)
      */
+    /**
+     * Köar upp React-scriptet och tillhörande CSS (build-filerna från wp-scripts)
+     */
     public function enqueue_admin_scripts(string $hook)
     {
-        // Kontrollera att vi bara laddar scriptet på vår sida
+        // Kontrollera att vi bara laddar scriptet på vår inställningssida
         if ($hook !== 'toplevel_page_biugu-settings') {
             return;
         }
 
-        // Här pekar vi på filen som wp-scripts genererar i build-mappen
+        // Definiera sökvägen till pluginets rotfil på ett säkert sätt
+        $plugin_root_file = dirname(dirname(dirname(__DIR__))) . '/biugu-core.php';
+
+        // Skapa rena, absoluta URL:er till din build-mapp
+        $js_url  = plugins_url('build/index.js', $plugin_root_file);
+        $css_url = plugins_url('build/index.css', $plugin_root_file);
+
+        // Hämta den automatiskt genererade tillgångsfilen om den finns
+        $asset_file = dirname(dirname(dirname(__DIR__))) . '/build/index.asset.php';
+        $assets     = file_exists($asset_file)
+            ? require $asset_file
+            : ['dependencies' => ['wp-element', 'wp-api-fetch'], 'version' => '1.0.0'];
+
+        // Köa upp JavaScript
         wp_enqueue_script(
             'biugu-admin-js',
-            plugins_url('../../build/index.js', dirname(__DIR__) . '/biugu-core.php'),
-            ['wp-element', 'wp-api-fetch'],
-            '1.0.0',
+            $js_url,
+            $assets['dependencies'],
+            $assets['version'],
             true
+        );
+
+        // Köa upp den sammanställda CSS-filen
+        wp_enqueue_style(
+            'biugu-admin-css',
+            $css_url,
+            [],
+            $assets['version']
         );
     }
 }
