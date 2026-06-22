@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "@wordpress/scripts": "^31.0.0"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4"
   }
 }
